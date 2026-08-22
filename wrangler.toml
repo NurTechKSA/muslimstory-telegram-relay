@@ -1,0 +1,17 @@
+name = "telegram-relay"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+
+# Секретов здесь нет и быть не должно.
+# BOT_TOKEN / RELAY_SECRET / WEBHOOK_SECRET / ORIGIN_URL кладутся через
+#   wrangler secret put <NAME>
+# см. README.md
+
+[observability]
+enabled = true
+
+# Необязательный тюнинг ретраев в outbound (не секреты).
+# [vars]
+# RETRY_MAX_ATTEMPTS = "3"
+# RETRY_BUDGET_MS = "8000"
+# RETRY_BASE_DELAY_MS = "250"
